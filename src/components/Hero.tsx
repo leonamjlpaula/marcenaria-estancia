@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
           <div className="mt-12 flex gap-6">
             <button className="bg-primary px-8 py-4 text-on-primary font-label text-sm uppercase tracking-widest transition-all hover:bg-primary-container">
-              Discover Collection
+              Ver Coleção
             </button>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Provenance tag */}
       <div className="absolute bottom-12 right-12 hidden md:block">
         <div className="bg-surface-container-highest px-4 py-2 text-on-tertiary-fixed font-label text-[10px] tracking-[0.2em] uppercase">
-          Handcrafted Precision • Est. 1984
+          Precisão Artesanal • Est. 1984
         </div>
       </div>
     </section>

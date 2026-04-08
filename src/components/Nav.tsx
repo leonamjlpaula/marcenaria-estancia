@@ -6,13 +6,13 @@ export default function Nav() {
           href="#story"
           className="text-stone-600 font-sans uppercase tracking-widest text-xs hover:text-stone-900 transition-opacity duration-300"
         >
-          Story
+          História
         </a>
         <a
           href="#projects"
           className="text-stone-600 font-sans uppercase tracking-widest text-xs hover:text-stone-900 transition-opacity duration-300"
         >
-          Projects
+          Projetos
         </a>
         <a
           href="#industrial"
@@ -24,10 +24,10 @@ export default function Nav() {
           href="#contact"
           className="text-stone-600 font-sans uppercase tracking-widest text-xs hover:text-stone-900 transition-opacity duration-300"
         >
-          Contact
+          Contato
         </a>
         <button className="bg-primary-container text-on-primary-container px-6 py-2 text-xs uppercase tracking-widest font-semibold ml-4">
-          Enquire
+          Solicitar Orçamento
         </button>
       </div>
     </nav>

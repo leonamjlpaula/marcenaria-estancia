@@ -3,49 +3,49 @@ const projects = [
     colSpan: "col-span-12 md:col-span-8",
     rowSpan: "row-span-4",
     src: "/images/gallery-cozinha.jpg",
-    alt: "luxury kitchen with deep walnut cabinetry and marble countertops",
-    title: "Cozinha Gourmet Walnut",
-    material: "Solid Walnut & Marble",
+    alt: "cozinha de luxo com armários de nogueira e bancadas de mármore",
+    title: "Cozinha Gourmet Nogueira",
+    material: "Nogueira Maciça & Mármore",
   },
   {
     colSpan: "col-span-12 md:col-span-4",
     rowSpan: "row-span-6",
     src: "/images/gallery-biblioteca.jpg",
-    alt: "contemporary office space with floor-to-ceiling mahogany bookshelves",
-    title: "Biblioteca Executive",
-    material: "Polished Mahogany",
+    alt: "escritório contemporâneo com estantes de mogno do piso ao teto",
+    title: "Biblioteca Executiva",
+    material: "Mogno Polido",
   },
   {
     colSpan: "col-span-12 md:col-span-4",
     rowSpan: "row-span-4",
     src: "/images/gallery-suite.jpg",
-    alt: "minimalist bedroom with custom light oak wall panels",
+    alt: "quarto minimalista com painéis de carvalho claro sob medida",
     title: "Suíte Minimalista",
-    material: "White Oak",
+    material: "Carvalho Branco",
   },
   {
     colSpan: "col-span-12 md:col-span-4",
     rowSpan: "row-span-4",
     src: "/images/gallery-living.jpg",
-    alt: "scandinavian style living room with handcrafted wooden sideboard",
-    title: "Living Room Nordics",
-    material: "European Ash",
+    alt: "sala de estar escandinava com aparador artesanal em madeira",
+    title: "Sala de Estar Nórdica",
+    material: "Freixo Europeu",
   },
   {
     colSpan: "col-span-12 md:col-span-8",
     rowSpan: "row-span-3",
     src: "/images/story-artisan.jpg",
-    alt: "detail of fine woodworking joinery on a custom table",
+    alt: "detalhe de encaixe em marcenaria fina em mesa sob medida",
     title: "Mesa de Jantar Atemporal",
-    material: "Brazilian Walnut",
+    material: "Nogueira Brasileira",
   },
   {
     colSpan: "col-span-12 md:col-span-4",
     rowSpan: "row-span-5",
     src: "/images/hero-bg.jpg",
-    alt: "bespoke closet system with integrated lighting",
+    alt: "closet personalizado com iluminação integrada",
     title: "Closet Personalizado",
-    material: "Cedar Lining",
+    material: "Forro de Cedro",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Projects() {
             <h2 className="font-serif text-5xl text-on-surface">Projetos Selecionados</h2>
           </div>
           <div className="text-on-surface-variant font-body text-sm italic mb-2">
-            Viewing collection 2023—2024
+            Coleção 2023—2024
           </div>
         </div>
       </div>

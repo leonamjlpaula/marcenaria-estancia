@@ -2,22 +2,22 @@ const products = [
   {
     title: "Mesa de Jantar Urban",
     material: "Carvalho Maciço & Aço Carbono",
-    alt: "industrial dining table with black steel legs and thick reclaimed oak top",
+    alt: "mesa de jantar industrial com pés de aço preto e tampo de carvalho maciço",
   },
   {
     title: "Estante Modular Loft",
     material: "Nogueira Americana & Ferro",
-    alt: "minimalist bookshelf with steel frame and walnut shelves",
+    alt: "estante minimalista com estrutura de aço e prateleiras de nogueira",
   },
   {
     title: "Mesa de Centro Factory",
     material: "Madeira de Demolição & Metal",
-    alt: "industrial coffee table with metal mesh shelf",
+    alt: "mesa de centro industrial com prateleira em tela metálica",
   },
   {
     title: "Escrivaninha Studio",
     material: "Freijó & Base Industrial",
-    alt: "modern desk with hairpin legs",
+    alt: "escrivaninha moderna com pés hairpin",
   },
 ];
 

@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote:
-      "Móveis de quality, serviços impecáveis. Ótima duração. A atenção aos detalhes é realmente o diferencial deles.",
+      "Móveis de qualidade, serviços impecáveis. Ótima durabilidade. A atenção aos detalhes é realmente o diferencial deles.",
     initials: "RA",
     name: "Ricardo Almeida",
     project: "Residencial São Pedro",

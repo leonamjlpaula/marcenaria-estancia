@@ -4,32 +4,31 @@ export default function Footer() {
       <div className="space-y-6">
         <div className="text-lg font-serif italic text-stone-800">Marcenaria Estância</div>
         <p className="text-stone-500 font-sans text-sm tracking-wide leading-relaxed">
-          © 2024 Marcenaria Estância. Handcrafted with Precision. 40 years of artisanal
-          woodworking excellence.
+          © 2024 Marcenaria Estância. Feito com precisão artesanal. 40 anos de excelência em marcenaria.
         </p>
       </div>
 
       <div className="flex flex-col gap-4">
         <h4 className="text-primary font-sans text-xs uppercase tracking-widest font-bold">
-          Details
+          Informações
         </h4>
         <a
           href="#"
           className="text-stone-500 font-sans text-sm tracking-wide hover:text-primary transition-colors duration-300"
         >
-          Location: São Pedro, SP
+          Localização: São Pedro, SP
         </a>
         <a
           href="#"
           className="text-stone-500 font-sans text-sm tracking-wide hover:text-primary transition-colors duration-300"
         >
-          Mon-Fri: 08:00 - 18:00
+          Seg-Sex: 08:00 - 18:00
         </a>
       </div>
 
       <div className="flex flex-col gap-4">
         <h4 className="text-primary font-sans text-xs uppercase tracking-widest font-bold">
-          Connect
+          Redes
         </h4>
         <a
           href="#"
@@ -41,7 +40,7 @@ export default function Footer() {
           href="#"
           className="text-stone-500 font-sans text-sm tracking-wide hover:text-primary transition-colors duration-300"
         >
-          Journal
+          Blog
         </a>
       </div>
     </footer>

@@ -14,7 +14,7 @@ export default function Story() {
             <div className="absolute -bottom-10 -right-10 bg-primary p-12 hidden xl:block">
               <span className="text-on-primary font-serif text-6xl italic">40</span>
               <p className="text-on-primary font-label text-[10px] uppercase tracking-widest mt-2">
-                Years of mastery
+                Anos de maestria
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Story() {
                   href="#"
                   className="text-on-surface font-label text-sm uppercase tracking-widest border-b border-on-surface/20 pb-2 hover:border-primary transition-all inline-block"
                 >
-                  Learn about our process
+                  Conheça nosso processo
                 </a>
               </div>
             </div>
