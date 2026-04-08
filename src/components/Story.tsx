@@ -4,19 +4,13 @@ export default function Story() {
       <div className="container mx-auto px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
           {/* Image column */}
-          <div className="lg:col-span-7 relative">
+          <div className="lg:col-span-7">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="w-full aspect-[4/5] object-cover shadow-xl"
               src="/images/story-artisan.jpg"
-              alt="an artisan craftsman using a plane on a raw piece of walnut wood in a traditional sunlit workshop"
+              alt="artesão trabalhando uma peça de nogueira em oficina iluminada pelo sol"
             />
-            <div className="absolute -bottom-10 -right-10 bg-primary p-12 hidden xl:block">
-              <span className="text-on-primary font-serif text-6xl italic">40</span>
-              <p className="text-on-primary font-label text-[10px] uppercase tracking-widest mt-2">
-                Anos de maestria
-              </p>
-            </div>
           </div>
 
           {/* Text column */}
@@ -45,6 +39,19 @@ export default function Story() {
                 >
                   Conheça nosso processo
                 </a>
+              </div>
+            </div>
+
+            {/* 40 anos banner — full width of text column */}
+            <div className="mt-12 bg-primary flex items-center justify-between px-10 py-8">
+              <span className="text-on-primary font-serif text-7xl italic leading-none">40</span>
+              <div className="text-right">
+                <p className="text-on-primary font-label text-[10px] uppercase tracking-[0.25em]">
+                  Anos de
+                </p>
+                <p className="text-on-primary font-label text-[10px] uppercase tracking-[0.25em]">
+                  Maestria
+                </p>
               </div>
             </div>
           </div>
