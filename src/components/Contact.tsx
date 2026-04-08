@@ -1,8 +1,48 @@
+const MAPS_URL = "https://maps.app.goo.gl/HPsNnbKKiVckQgH76";
+const MAPS_EMBED =
+  "https://maps.google.com/maps?q=Rua+Jo%C3%A3o+Cirino+Sobrinho%2C+265%2C+S%C3%A3o+Pedro%2C+SP%2C+Brazil&output=embed&z=16&hl=pt-BR";
+
+function IconLocation() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </svg>
+  );
+}
+
+function IconClock() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 3"/>
+    </svg>
+  );
+}
+
+function IconArrow() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </svg>
+  );
+}
+
+function IconCompass() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" strokeLinejoin="miter">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/>
+    </svg>
+  );
+}
+
 export default function Contact() {
   return (
     <section className="py-32 bg-surface" id="contact">
       <div className="container mx-auto px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
+
           {/* Left — contact info */}
           <div>
             <h2 className="font-serif text-6xl mb-12">
@@ -16,10 +56,8 @@ export default function Contact() {
 
             <div className="space-y-12">
               <div className="flex gap-8 group">
-                <div className="bg-surface-container w-16 h-16 flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <span className="material-symbols-outlined group-hover:text-on-primary">
-                    location_on
-                  </span>
+                <div className="bg-surface-container w-16 h-16 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0">
+                  <IconLocation />
                 </div>
                 <div>
                   <h4 className="font-label uppercase text-xs tracking-widest mb-2 text-primary font-bold">
@@ -33,10 +71,8 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-8 group">
-                <div className="bg-surface-container w-16 h-16 flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <span className="material-symbols-outlined group-hover:text-on-primary">
-                    schedule
-                  </span>
+                <div className="bg-surface-container w-16 h-16 flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0">
+                  <IconClock />
                 </div>
                 <div>
                   <h4 className="font-label uppercase text-xs tracking-widest mb-2 text-primary font-bold">
@@ -51,44 +87,55 @@ export default function Contact() {
             </div>
 
             <div className="mt-20">
-              <button className="bg-primary px-12 py-6 text-on-primary font-label text-sm uppercase tracking-widest flex items-center gap-4 group">
+              <button className="bg-primary px-12 py-6 text-on-primary font-label text-sm uppercase tracking-widest flex items-center gap-4 group hover:bg-primary-container transition-colors">
                 <span>Falar no WhatsApp</span>
-                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
-                  arrow_forward
+                <span className="group-hover:translate-x-2 transition-transform">
+                  <IconArrow />
                 </span>
               </button>
             </div>
           </div>
 
-          {/* Right — showroom card */}
-          <div className="relative h-[600px] bg-surface-container-high">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"
-              src="/images/contact-map.jpg"
-              alt="top-down map style aesthetic with wood samples and blueprints on a studio table"
+          {/* Right — Google Maps embed */}
+          <div className="relative h-[600px] overflow-hidden" style={{ boxShadow: "0px 20px 40px rgba(43,31,23,0.08)" }}>
+            <iframe
+              src={MAPS_EMBED}
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: "grayscale(20%) contrast(1.05)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização da Marcenaria Estância"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="text-center p-12 bg-white/80 backdrop-blur-md max-w-sm"
-                style={{ boxShadow: "0px 20px 40px rgba(43, 31, 23, 0.06)" }}
-              >
-                <span className="material-symbols-outlined text-4xl mb-4 text-primary block">
-                  explore
-                </span>
-                <p className="font-serif text-2xl mb-4">Visite Nosso Showroom</p>
-                <p className="text-on-surface-variant text-sm mb-6">
-                  Experimente o toque e a qualidade de nossos materiais pessoalmente.
-                </p>
-                <a
-                  href="#"
-                  className="text-xs uppercase tracking-widest font-bold underline underline-offset-8"
-                >
-                  Abrir no Maps
-                </a>
+
+            {/* Floating card overlay */}
+            <div
+              className="absolute bottom-6 left-6 right-6 p-8 bg-white/90 backdrop-blur-md flex items-center justify-between gap-4"
+              style={{ boxShadow: "0px 8px 24px rgba(43,31,23,0.10)" }}
+            >
+              <div className="flex items-center gap-4">
+                <div className="text-primary">
+                  <IconCompass />
+                </div>
+                <div>
+                  <p className="font-serif text-lg leading-tight">Visite Nosso Showroom</p>
+                  <p className="text-on-surface-variant text-xs mt-1">
+                    Rua João Cirino Sobrinho, 265 — São Pedro, SP
+                  </p>
+                </div>
               </div>
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-label text-[10px] uppercase tracking-widest whitespace-nowrap text-primary border-b border-primary/30 pb-px hover:border-primary transition-colors"
+              >
+                Abrir no Maps
+              </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
