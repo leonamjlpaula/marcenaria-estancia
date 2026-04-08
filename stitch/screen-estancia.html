@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#f1ede6",
+                    "on-surface-variant": "#55433c",
+                    "tertiary-fixed-dim": "#d8c2b6",
+                    "on-tertiary-fixed": "#251911",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f4f0e9",
+                    "surface-container-low": "#f7f3ec",
+                    "on-tertiary-container": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#380d00",
+                    "surface": "#fdf9f2",
+                    "on-tertiary-fixed-variant": "#53443a",
+                    "outline-variant": "#dbc1b8",
+                    "on-background": "#1c1c18",
+                    "on-secondary-fixed": "#121f00",
+                    "on-primary-container": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary": "#536438",
+                    "primary-fixed": "#ffdbcf",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3c4c23",
+                    "surface-tint": "#9a4523",
+                    "outline": "#88726b",
+                    "on-secondary-container": "#596a3d",
+                    "background": "#fdf9f2",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#b85c38",
+                    "surface-dim": "#dddad3",
+                    "surface-variant": "#e6e2db",
+                    "primary": "#994422",
+                    "primary-fixed-dim": "#ffb59a",
+                    "on-surface": "#1c1c18",
+                    "tertiary-container": "#847368",
+                    "surface-bright": "#fdf9f2",
+                    "on-primary-fixed-variant": "#7b2f0e",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#d6eab2",
+                    "tertiary-fixed": "#f5ded1",
+                    "secondary-fixed": "#d6eab2",
+                    "tertiary": "#6b5a50",
+                    "secondary-fixed-dim": "#bace98",
+                    "surface-container-highest": "#e6e2db",
+                    "surface-container-high": "#ece8e1",
+                    "inverse-surface": "#31302c",
+                    "inverse-primary": "#ffb59a",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fdf9f2; }
+        ::-webkit-scrollbar-thumb { background: #dbc1b8; }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 100px;
+            gap: 1.5rem;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/50 dark:bg-stone-900/50 backdrop-blur-xl no-border transition-colors duration-500 ease-in-out flex justify-center items-center px-12 py-6 max-w-full mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#story">Story</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#projects">Projects</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#industrial">Industrial</a>
+<a class="text-stone-600 dark:text-stone-400 font-sans uppercase tracking-widest text-xs hover:text-stone-900 dark:hover:text-stone-100 transition-opacity duration-300" href="#contact">Contact</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 text-xs uppercase tracking-widest font-semibold ml-4">Enquire</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[20%] brightness-[85%]" data-alt="dramatic interior shot of a bespoke wood paneled room with handcrafted furniture and warm atmospheric lighting through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8OxTsPvNIq3fNyW2JKY1C8DnoTFGbrovF1bgjGwkXEc5T2ay3xCtPfNo1ngB7OT3HRAjS6JjMNDmC3EC_yvoSad49DkP9i2zwMUbnBLoQG7FuAeGRzT7rcrQaygUjDmgerEpAEZUiRUtrm1cjXlgZ4gge3m2GBFa5A8-AMYyPN7SfQQ9eLlpLIv3rUeJhN5TFp2D12bbIyOcziGmirRb0wTWBT2h_6rNGdLPhIf-e46NJq3JyYq0JHMBrp9LS0u_RB04xCIVh8yY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-tertiary-fixed/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-12 relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-white font-headline text-[clamp(3rem,8vw,6rem)] leading-[1.1] tracking-tight mb-8">
+                    Marcenaria Estância
+                </h1>
+<p class="text-white/90 font-body text-xl md:text-2xl leading-relaxed max-w-xl font-light">
+                    40 anos produzindo as melhores soluções em móveis planejados.
+                </p>
+<div class="mt-12 flex gap-6">
+<button class="bg-primary px-8 py-4 text-on-primary font-label text-sm uppercase tracking-widest transition-all hover:bg-primary-container">
+                        Discover Collection
+                    </button>
+</div>
+</div>
+</div>
+<!-- Hero Provenance Tag -->
+<div class="absolute bottom-12 right-12 hidden md:block">
+<div class="bg-surface-container-highest px-4 py-2 text-on-tertiary-fixed font-label text-[10px] tracking-[0.2em] uppercase">
+                Handcrafted Precision • Est. 1984
+            </div>
+</div>
+</section>
+<!-- Company History Section -->
+<section class="py-32 bg-surface-container-low overflow-hidden" id="story">
+<div class="container mx-auto px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+<div class="lg:col-span-7 relative">
+<img class="w-full aspect-[4/5] object-cover shadow-xl" data-alt="an artisan craftsman using a plane on a raw piece of walnut wood in a traditional sunlit workshop with sawdust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjQ9TdVoM6zPWq32My-AlodBUE3eG6-i0B4zL_dRrzEZm0tBe80u2pnUuEpqVeBK3CWQBe5WaCDjPtj4fxaI_S_HQYoHD9SB_x5SHEYwcGKr84R-hMhmT3xWVT1dvsbs8HSPjhZs2aAOtFx4MaM3Czm9hlV0VDjVa0sBpnzzXf9_0H7DMKk9JBLy5K8LdR6KqZJ3Z7BeW73Vxyq_hySHc-u0esYKCgW2XXHdcufEg5kTlEuLbSixF4E8arPZTLitlu52Y7G3yVZMY"/>
+<div class="absolute -bottom-10 -right-10 bg-primary p-12 hidden xl:block">
+<span class="text-on-primary font-headline text-6xl italic">40</span>
+<p class="text-on-primary font-label text-[10px] uppercase tracking-widest mt-2" style="">Years of mastery</p>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="text-primary font-label text-xs uppercase tracking-[0.3em] mb-6">Nossa Herança</span>
+<h2 class="font-headline text-5xl md:text-6xl text-on-surface mb-10 leading-tight">
+                        A Arte de Transformar <br/><span class="italic text-primary">Madeira em Legado</span>
+</h2>
+<div class="space-y-8 text-on-surface-variant font-body text-lg leading-relaxed max-w-md">
+<p>
+                            Desde a nossa fundação, a Marcenaria Estância tem se dedicado à busca da perfeição. Cada peça que sai de nossa oficina carrega consigo décadas de conhecimento técnico e um respeito profundo pela matéria-prima.
+                        </p>
+<p>
+                            Não criamos apenas móveis; moldamos ambientes que contam histórias. Nossa abordagem editorial foca na curadoria de texturas e no design minimalista que atravessa gerações.
+                        </p>
+<div class="pt-6">
+<a class="text-on-surface font-label text-sm uppercase tracking-widest border-b border-on-surface/20 pb-2 hover:border-primary transition-all inline-block" href="#">Learn about our process</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Gallery Section -->
+<section class="py-32 bg-surface overflow-hidden" id="projects">
+<div class="container mx-auto px-12 mb-20">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-xl">
+<span class="text-primary font-label text-xs uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
+<h2 class="font-headline text-5xl text-on-surface">Projetos Selecionados</h2>
+</div>
+<div class="text-on-surface-variant font-body text-sm italic mb-2">
+                    Viewing collection 2023—2024
+                </div>
+</div>
+</div>
+<div class="px-6 md:px-12 w-full">
+<div class="masonry-grid">
+<!-- Row 1 Left - Large Horizontal -->
+<div class="col-span-12 md:col-span-8 row-span-4 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxury kitchen with deep walnut cabinetry and marble countertops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-uTlT0VynSxkkbiKNtq37CEir2tGn1Zmu3TUdlb9fFvQUPWKb4VVnlkq1fClhY2cEG3dToWZx8hKgAjyEKcbSvM7KvhyOf_Mt1YRyGof0LCHq2BL1GJZ4JJlsCw_2o-t-PGIz8lBDIfukMdx_6mAB00laMEN3VPzN6GcZfByNlGwyT6oi68mu7PVJcpAVEtia2pIGivSM7F4IDyMDMM2bk7JlvKGmW-EYf9KBgJf55yfb-Jfz92OkVLbS-5XFtYI_zpV_30QCXnk"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Cozinha Gourmet Walnut</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">Solid Walnut &amp; Marble</span>
+</div>
+</div>
+<!-- Row 1 Right - Tall Vertical -->
+<div class="col-span-12 md:col-span-4 row-span-6 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="contemporary office space with floor-to-ceiling mahogany bookshelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Iup0mtzXFDD9jBy7EWlViLDD87vEfIF_6zn4q86rPbOvHJfFJe9_mjY4SDnvr_FydkSon7SIkUP1Vw0RVggkT96ZkxbNvYu0WLQJDEf4gxniigBP6n_wrD9vOmT6SvIahOEX0cprsvBJwkpcFa8_Dd4E9rbr-KlEgst7VRDLqr23J-gYghLGtXBHcePDsUbzbqwonYv400D5ZbFjVd9TxJR6vSJ_-HuEr_PfH3Oe0vhP4zu9CyNpRkSCb0pn3e6A0HxXejdj0yc"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Biblioteca Executive</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">Polished Mahogany</span>
+</div>
+</div>
+<!-- Row 2 Left - Squareish -->
+<div class="col-span-12 md:col-span-4 row-span-4 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist bedroom with custom light oak wall panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWwI310qj0xyyUbZIkaw1gM0BzFhY9cIXzvw3IXWwxlFbZ0pwulez-q2QzFI2c4TMeBoiMA2ojDT98Npue7b0o0B-eAHLtmNiRDLc2u_Ar23Lo7fX5KkT2ZcYrar6MIV0GB_f4yltYeO6QrM4A9qzNrr29m5AAnfm3JggYpoPIx7pJFlbhv2kt3M3qHZwHZ62zcMuoDit-6v6TH1mWwUqKOUKnVVSSqIZwURT2wJx1Rk_AuImO6JVKpAqWBCjDP3MwZAcnRRUi49o"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Suíte Minimalista</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">White Oak</span>
+</div>
+</div>
+<!-- Row 2 Middle - Squareish -->
+<div class="col-span-12 md:col-span-4 row-span-4 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="scandinavian style living room with handcrafted wooden sideboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVTWDYfDrra_jXTZ9FqHKqyeV6JrnYpDXighZxksj_jUmdmmjl6atcTcCWpSBHYMFeWQjTsLY2ILlDa33vCxMF2GSU4hk6QjFnLDtrNnQDSTVr0gakR2nyyjD2-99zsSUykNwXCD8qphmiWQOR7rOlQcn57S_iO8Bd1sHPBYev8LPmj8FIdQy5NP4_fRlq9fCNHmaAWFycOJEK3MmIawwohWNILmXgSnUIixafrBd82LnVcKrZSVUQFwfgm9rjCPNDZPdMJoMrF44"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Living Room Nordics</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">European Ash</span>
+</div>
+</div>
+<!-- Row 3 - Wide Horizontal -->
+<div class="col-span-12 md:col-span-8 row-span-3 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="detail of fine woodworking joinery on a custom table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjQ9TdVoM6zPWq32My-AlodBUE3eG6-i0B4zL_dRrzEZm0tBe80u2pnUuEpqVeBK3CWQBe5WaCDjPtj4fxaI_S_HQYoHD9SB_x5SHEYwcGKr84R-hMhmT3xWVT1dvsbs8HSPjhZs2aAOtFx4MaM3Czm9hlV0VDjVa0sBpnzzXf9_0H7DMKk9JBLy5K8LdR6KqZJ3Z7BeW73Vxyq_hySHc-u0esYKCgW2XXHdcufEg5kTlEuLbSixF4E8arPZTLitlu52Y7G3yVZMY"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Mesa de Jantar Atemporal</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">Brazilian Walnut</span>
+</div>
+</div>
+<!-- Row 3 Right - Small Vertical -->
+<div class="col-span-12 md:col-span-4 row-span-5 group relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="bespoke closet system with integrated lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8OxTsPvNIq3fNyW2JKY1C8DnoTFGbrovF1bgjGwkXEc5T2ay3xCtPfNo1ngB7OT3HRAjS6JjMNDmC3EC_yvoSad49DkP9i2zwMUbnBLoQG7FuAeGRzT7rcrQaygUjDmgerEpAEZUiRUtrm1cjXlgZ4gge3m2GBFa5A8-AMYyPN7SfQQ9eLlpLIv3rUeJhN5TFp2D12bbIyOcziGmirRb0wTWBT2h_6rNGdLPhIf-e46NJq3JyYq0JHMBrp9LS0u_RB04xCIVh8yY"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<p class="text-white font-headline text-2xl">Closet Personalizado</p>
+<span class="text-white/80 text-xs uppercase font-label tracking-widest">Cedar Lining</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industrial Collection Section -->
+<section class="py-32 bg-surface-container-low" id="industrial">
+<div class="container mx-auto px-12">
+<div class="mb-20">
+<span class="text-primary font-label text-xs uppercase tracking-[0.3em] mb-4 block">Nova Coleção</span>
+<h2 class="font-headline text-5xl text-on-surface">Linha Industrial</h2>
+<p class="mt-6 text-on-surface-variant font-body text-lg max-w-2xl leading-relaxed">
+            A união perfeita entre a força do aço e a alma da madeira. Peças desenhadas para ambientes contemporâneos que exigem durabilidade e estilo urbano.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="industrial dining table with black steel legs and thick reclaimed oak top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsv9mPzYnS59WvX6Yv3fMvP8nLz_6wVvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w"/>
+</div>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Mesa de Jantar Urban</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Carvalho Maciço &amp; Aço Carbono</p>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist bookshelf with steel frame and walnut shelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsv9mPzYnS59WvX6Yv3fMvP8nLz_6wVvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w"/>
+</div>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Estante Modular Loft</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Nogueira Americana &amp; Ferro</p>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="industrial coffee table with metal mesh shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsv9mPzYnS59WvX6Yv3fMvP8nLz_6wVvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w"/>
+</div>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Mesa de Centro Factory</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Madeira de Demolição &amp; Metal</p>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern desk with hairpin legs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsv9mPzYnS59WvX6Yv3fMvP8nLz_6wVvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w-VvR9S_0v8_X9v_U9w"/>
+</div>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Escrivaninha Studio</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Freijó &amp; Base Industrial</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Carousel Section -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="container mx-auto px-12">
+<h2 class="font-headline text-4xl text-center mb-24 italic">Palavras de quem vive nossos espaços</h2>
+<div class="flex overflow-x-auto gap-12 pb-12 snap-x no-scrollbar">
+<div class="min-w-[400px] snap-center bg-surface-container-lowest p-16 relative">
+<span class="material-symbols-outlined absolute top-8 left-8 text-outline-variant/30 text-6xl" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+<p class="font-body text-xl text-on-surface relative z-10 leading-relaxed italic">
+                        "Móveis de quality, serviços impecáveis. Ótima duração. A atenção aos detalhes é realmente o diferencial deles."
+                    </p>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-fixed flex items-center justify-center text-xs font-bold">RA</div>
+<div>
+<p class="font-label text-sm uppercase font-semibold">Ricardo Almeida</p>
+<p class="text-on-surface-variant text-xs">Residencial São Pedro</p>
+</div>
+</div>
+</div>
+<div class="min-w-[400px] snap-center bg-surface-container-lowest p-16 relative">
+<span class="material-symbols-outlined absolute top-8 left-8 text-outline-variant/30 text-6xl" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+<p class="font-body text-xl text-on-surface relative z-10 leading-relaxed italic">
+                        "Excelente trabalho, entrega no prazo. Superaram minhas expectativas com o acabamento da cozinha."
+                    </p>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-fixed flex items-center justify-center text-xs font-bold">ML</div>
+<div>
+<p class="font-label text-sm uppercase font-semibold">Maria Lúcia</p>
+<p class="text-on-surface-variant text-xs">Apartamento Jardins</p>
+</div>
+</div>
+</div>
+<div class="min-w-[400px] snap-center bg-surface-container-lowest p-16 relative">
+<span class="material-symbols-outlined absolute top-8 left-8 text-outline-variant/30 text-6xl" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+<p class="font-body text-xl text-on-surface relative z-10 leading-relaxed italic">
+                        "Encontramos na Estância a parceria ideal para nosso projeto corporativo. A durabilidade das peças é notável."
+                    </p>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-fixed flex items-center justify-center text-xs font-bold">JP</div>
+<div>
+<p class="font-label text-sm uppercase font-semibold">João Pedro</p>
+<p class="text-on-surface-variant text-xs">Arquiteto</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface" id="contact">
+<div class="container mx-auto px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-32">
+<div>
+<h2 class="font-headline text-6xl mb-12">Comece sua <br/><span class="italic text-primary">Próxima História</span></h2>
+<p class="text-on-surface-variant font-body text-xl mb-16 leading-relaxed">
+                        Estamos prontos para ouvir suas ideias e transformá-las em realidade sólida e duradoura. Visite nosso showroom ou agende uma consultoria via WhatsApp.
+                    </p>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<div class="bg-surface-container w-16 h-16 flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined group-hover:text-on-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-label uppercase text-xs tracking-widest mb-2 text-primary font-bold">Localização</h4>
+<p class="text-on-surface font-body text-lg">Rua João Cirino Sobrinho, 265, <br/>São Pedro, SP</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="bg-surface-container w-16 h-16 flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined group-hover:text-on-primary">schedule</span>
+</div>
+<div>
+<h4 class="font-label uppercase text-xs tracking-widest mb-2 text-primary font-bold">Horário de Funcionamento</h4>
+<p class="text-on-surface font-body text-lg">Seg-Sex: 08:00 - 18:00 <br/>Sáb: 08:00 - 12:00</p>
+</div>
+</div>
+</div>
+<div class="mt-20">
+<button class="bg-primary px-12 py-6 text-on-primary font-label text-sm uppercase tracking-widest flex items-center gap-4 group">
+<span>Falar no WhatsApp</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative h-[600px] bg-surface-container-high">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="top-down map style aesthetic with wood samples and blueprints on a studio table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccdUsedY0vtBfI2U_exQCJFUfUuG08GrxGfaPnnQynl-quRyCU8OFy1iVxCb17G1Z75dKd9KFvGcqV9Rs898CHYzyhLyeX9NKDr5UcwNwseRSi1waScj9Fur5HQlkoJYoOvcVd8qfXk_U3E8pnp7AHykqu37zvoWsI7Xe7w_ufE1CbPtRK5FbLuB_EDMs2Fkzw0_sex0EAkKZdffjzxMnngCKqP6BGhwScgsPSrGDkHnBKZ23nMBs7ffJnHw1XiWSMVj5xCKuoPg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center p-12 bg-white/80 backdrop-blur-md max-w-sm">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary">explore</span>
+<p class="font-headline text-2xl mb-4">Visite Nosso Showroom</p>
+<p class="text-on-surface-variant text-sm mb-6">Experimente o toque e a qualidade de nossos materiais pessoalmente.</p>
+<a class="text-xs uppercase tracking-widest font-bold underline underline-offset-8" data-location="São Pedro, SP" href="#">Abrir no Maps</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full border-t border-stone-200/20 grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-24 max-w-full mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-serif italic text-stone-800 dark:text-stone-200">Marcenaria Estância</div>
+<p class="text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide leading-relaxed">
+                © 2024 Marcenaria Estância. Handcrafted with Precision. 40 years of artisanal woodworking excellence.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#994422] dark:text-[#b85c38] font-sans text-xs uppercase tracking-widest font-bold">Details</h4>
+<a class="text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide hover:text-[#994422] transition-colors duration-300" href="#">Location: São Paulo, BR</a>
+<a class="text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide hover:text-[#994422] transition-colors duration-300" href="#">Mon-Fri: 08:00 - 18:00</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#994422] dark:text-[#b85c38] font-sans text-xs uppercase tracking-widest font-bold">Connect</h4>
+<a class="text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide hover:text-[#994422] transition-colors duration-300" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide hover:text-[#994422] transition-colors duration-300" href="#">Journal</a>
+</div>
+</footer>
+</body></html>

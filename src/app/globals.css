@@ -1,120 +1,120 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
 
 @theme inline {
   /* Surfaces */
   --color-surface:                   #fdf9f2;
+  --color-surface-bright:            #fdf9f2;
+  --color-surface-dim:               #dddad3;
+  --color-surface-variant:           #e6e2db;
   --color-surface-container-lowest:  #ffffff;
   --color-surface-container-low:     #f7f3ec;
-  --color-surface-container:         #f0ebe2;
-  --color-surface-container-high:    #e8e2d8;
-  --color-surface-container-highest: #e0d9cd;
+  --color-surface-container:         #f1ede6;
+  --color-surface-container-high:    #ece8e1;
+  --color-surface-container-highest: #e6e2db;
+  --color-surface-tint:              #9a4523;
+
+  /* Background */
+  --color-background:    #fdf9f2;
+  --color-on-background: #1c1c18;
 
   /* Primary — Mahogany */
-  --color-primary:           #994422;
-  --color-primary-container: #b85c38;
-  --color-on-primary:        #ffffff;
+  --color-primary:               #994422;
+  --color-primary-container:     #b85c38;
+  --color-primary-fixed:         #ffdbcf;
+  --color-primary-fixed-dim:     #ffb59a;
+  --color-on-primary:            #ffffff;
+  --color-on-primary-container:  #ffffff;
+  --color-on-primary-fixed:      #380d00;
+  --color-on-primary-fixed-variant: #7b2f0e;
+  --color-inverse-primary:       #ffb59a;
 
   /* Secondary — Sage */
-  --color-secondary:           #5a7a4a;
-  --color-secondary-container: #d6eab2;
-  --color-on-secondary:        #ffffff;
+  --color-secondary:              #536438;
+  --color-secondary-container:    #d6eab2;
+  --color-secondary-fixed:        #d6eab2;
+  --color-secondary-fixed-dim:    #bace98;
+  --color-on-secondary:           #ffffff;
+  --color-on-secondary-container: #596a3d;
+  --color-on-secondary-fixed:     #121f00;
+  --color-on-secondary-fixed-variant: #3c4c23;
 
   /* Tertiary */
-  --color-tertiary:       #7a6a5a;
-  --color-on-tertiary-fixed: #3a2e26;
+  --color-tertiary:              #6b5a50;
+  --color-tertiary-container:    #847368;
+  --color-tertiary-fixed:        #f5ded1;
+  --color-tertiary-fixed-dim:    #d8c2b6;
+  --color-on-tertiary:           #ffffff;
+  --color-on-tertiary-container: #ffffff;
+  --color-on-tertiary-fixed:     #251911;
+  --color-on-tertiary-fixed-variant: #53443a;
+
+  /* Inverse */
+  --color-inverse-surface:    #31302c;
+  --color-inverse-on-surface: #f4f0e9;
+
+  /* Error */
+  --color-error:              #ba1a1a;
+  --color-error-container:    #ffdad6;
+  --color-on-error:           #ffffff;
+  --color-on-error-container: #93000a;
 
   /* Text */
-  --color-on-surface:         #1e1510;
+  --color-on-surface:         #1c1c18;
   --color-on-surface-variant: #55433c;
 
   /* Borders */
-  --color-outline:         rgba(43, 31, 23, 0.20);
-  --color-outline-variant: rgba(219, 193, 184, 0.15);
-
-  /* Walnut shadow */
-  --shadow-atmospheric: 0px 20px 40px rgba(43, 31, 23, 0.06);
+  --color-outline:         #88726b;
+  --color-outline-variant: #dbc1b8;
 
   /* Typography */
-  --font-serif: "Newsreader", Georgia, serif;
-  --font-sans:  "Inter", system-ui, sans-serif;
+  --font-headline: "Newsreader", Georgia, serif;
+  --font-body:     "Inter", system-ui, sans-serif;
+  --font-label:    "Inter", system-ui, sans-serif;
+  --font-sans:     "Inter", system-ui, sans-serif;
+  --font-serif:    "Newsreader", Georgia, serif;
 
   /* Radii — strictly 0 per design system */
-  --radius: 0px;
+  --radius:    0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
 }
 
 :root {
-  --background: var(--color-surface-container-low);
-  --foreground: var(--color-on-surface);
+  --shadow-atmospheric: 0px 20px 40px rgba(43, 31, 23, 0.06);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Editorial typography utilities */
-.text-display {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+.font-serif { font-family: "Newsreader", serif; }
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
 }
 
-.text-headline {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+/* Masonry-style project grid */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 100px;
+  gap: 1.5rem;
 }
 
-.text-body-editorial {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  line-height: 1.7;
-}
+/* Hide scrollbar on testimonials carousel */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-.text-label-caps {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fdf9f2; }
+::-webkit-scrollbar-thumb { background: #dbc1b8; }
 
-/* Frosted glass nav */
-.glass-surface {
-  background: rgba(253, 249, 242, 0.70);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-}
-
-/* CTA gradient — polished mahogany */
-.bg-cta-gradient {
-  background: radial-gradient(circle at 60% 40%, #b85c38, #994422);
-}
-
-/* Atmospheric shadow */
-.shadow-atmospheric {
-  box-shadow: var(--shadow-atmospheric);
-}
-
-/* Input: bottom-border only */
-.input-editorial {
-  border: none;
-  border-bottom: 1px solid var(--color-outline-variant);
-  background: transparent;
-  outline: none;
-  transition: border-color 400ms ease-in-out;
-}
-
-.input-editorial:focus {
-  border-bottom-color: var(--color-primary);
-}
-
-/* Motion — slow, deliberate */
-* {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Slow, deliberate motion */
+* { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
