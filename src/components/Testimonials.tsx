@@ -4,21 +4,18 @@ const testimonials = [
       "Móveis de qualidade, serviços impecáveis. Ótima durabilidade. A atenção aos detalhes é realmente o diferencial deles.",
     name: "Ricardo Almeida",
     project: "Residencial São Pedro",
-    offset: "lg:pt-0",
   },
   {
     quote:
       "Excelente trabalho, entrega no prazo. Superaram minhas expectativas com o acabamento da cozinha.",
     name: "Maria Lúcia",
     project: "Apartamento Jardins",
-    offset: "lg:pt-24",
   },
   {
     quote:
       "Encontramos na Estância a parceria ideal para nosso projeto corporativo. A durabilidade das peças é notável.",
     name: "João Pedro",
     project: "Arquiteto",
-    offset: "lg:pt-10",
   },
 ];
 
@@ -64,7 +61,11 @@ export default function Testimonials() {
         {/* Staggered columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {testimonials.map((t, i) => (
-            <div key={i} className={`flex flex-col ${t.offset}`}>
+            <div
+              key={i}
+              className="flex flex-col p-10"
+              style={{ backgroundColor: "#ffffff", boxShadow: "0px 20px 40px rgba(43,31,23,0.06)" }}
+            >
               {/* Decorative large quote — typographic, no icon font */}
               <div
                 className="font-serif leading-none mb-6 select-none"
