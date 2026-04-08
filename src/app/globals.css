@@ -1,26 +1,120 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap");
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Surfaces */
+  --color-surface:                   #fdf9f2;
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #f7f3ec;
+  --color-surface-container:         #f0ebe2;
+  --color-surface-container-high:    #e8e2d8;
+  --color-surface-container-highest: #e0d9cd;
+
+  /* Primary — Mahogany */
+  --color-primary:           #994422;
+  --color-primary-container: #b85c38;
+  --color-on-primary:        #ffffff;
+
+  /* Secondary — Sage */
+  --color-secondary:           #5a7a4a;
+  --color-secondary-container: #d6eab2;
+  --color-on-secondary:        #ffffff;
+
+  /* Tertiary */
+  --color-tertiary:       #7a6a5a;
+  --color-on-tertiary-fixed: #3a2e26;
+
+  /* Text */
+  --color-on-surface:         #1e1510;
+  --color-on-surface-variant: #55433c;
+
+  /* Borders */
+  --color-outline:         rgba(43, 31, 23, 0.20);
+  --color-outline-variant: rgba(219, 193, 184, 0.15);
+
+  /* Walnut shadow */
+  --shadow-atmospheric: 0px 20px 40px rgba(43, 31, 23, 0.06);
+
+  /* Typography */
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans:  "Inter", system-ui, sans-serif;
+
+  /* Radii — strictly 0 per design system */
+  --radius: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--color-surface-container-low);
+  --foreground: var(--color-on-surface);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial typography utilities */
+.text-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.text-headline {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.text-body-editorial {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.text-label-caps {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Frosted glass nav */
+.glass-surface {
+  background: rgba(253, 249, 242, 0.70);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* CTA gradient — polished mahogany */
+.bg-cta-gradient {
+  background: radial-gradient(circle at 60% 40%, #b85c38, #994422);
+}
+
+/* Atmospheric shadow */
+.shadow-atmospheric {
+  box-shadow: var(--shadow-atmospheric);
+}
+
+/* Input: bottom-border only */
+.input-editorial {
+  border: none;
+  border-bottom: 1px solid var(--color-outline-variant);
+  background: transparent;
+  outline: none;
+  transition: border-color 400ms ease-in-out;
+}
+
+.input-editorial:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Motion — slow, deliberate */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
