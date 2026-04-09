@@ -1,5 +1,23 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const boska = localFont({
+  src: [
+    {
+      path: "../../src/fonts/Boska/WEB/fonts/Boska-Variable.woff2",
+      style: "normal",
+      weight: "200 900",
+    },
+    {
+      path: "../../src/fonts/Boska/WEB/fonts/Boska-VariableItalic.woff2",
+      style: "italic",
+      weight: "200 900",
+    },
+  ],
+  variable: "--font-boska",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Marcenaria Estância",
@@ -12,12 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="h-full">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Stardom&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="pt-BR" className={`h-full ${boska.variable}`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

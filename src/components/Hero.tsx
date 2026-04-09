@@ -24,23 +24,23 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-12 relative z-10">
+      <div className="container mx-auto px-6 sm:px-12 relative z-10">
         <div className="max-w-2xl">
           {/* Eyebrow */}
           <span
-            className="font-label text-xs uppercase tracking-[0.3em] mb-6 block"
+            className="font-label text-xs uppercase tracking-[0.3em] mb-4 sm:mb-6 block"
             style={{ color: "#ffb59a" }}
           >
             Precisão Artesanal • Est. 1984
           </span>
 
           <h1
-            className="font-serif leading-[1.05] mb-6"
+            className="font-serif leading-[1.05] mb-5 sm:mb-6"
             style={{
-              fontSize: "clamp(3rem, 8vw, 6rem)",
+              fontSize: "clamp(3.6rem, 14.4vw, 8.64rem)",
               color: "#f4f0e9",
               letterSpacing: "-0.03em",
-              fontFamily: "'Stardom', serif",
+              fontFamily: "var(--font-boska), serif",
             }}
           >
             Marcenaria <span style={{ fontStyle: "italic", color: "#ffb59a" }}>Estância</span>
