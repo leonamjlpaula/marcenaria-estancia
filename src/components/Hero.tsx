@@ -1,17 +1,17 @@
 "use client";
 
-import imgHeroBkg from "@/images/hero_bkg.webp";
-
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
-      {/* Background image */}
+      {/* Background video */}
       <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <video
           className="w-full h-full object-cover"
-          src={imgHeroBkg.src}
-          alt="oficina de marcenaria com luz natural e ferramentas artesanais"
+          src="/videos/hero_background.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         {/* Left-side gradient — dark where the text lives, fully transparent on the right */}
         <div
