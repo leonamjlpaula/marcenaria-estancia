@@ -124,7 +124,7 @@ export default function Projects() {
                 src={p.src}
                 alt={p.alt}
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/65 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/65 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                 <p className="text-white font-serif text-xl leading-tight">{p.title}</p>
                 <span className="text-white/75 text-xs uppercase font-label tracking-widest">
                   {p.material}
