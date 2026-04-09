@@ -40,6 +40,7 @@ export default function Hero() {
               fontSize: "clamp(3rem, 8vw, 6rem)",
               color: "#f4f0e9",
               letterSpacing: "-0.03em",
+              fontFamily: "'Stardom', serif",
             }}
           >
             Marcenaria <span style={{ fontStyle: "italic", color: "#ffb59a" }}>Estância</span>

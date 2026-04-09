@@ -22,6 +22,7 @@
 
 # misc
 .DS_Store
+.remember/
 *.pem
 
 # debug
