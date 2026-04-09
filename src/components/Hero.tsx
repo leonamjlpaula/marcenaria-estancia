@@ -1,3 +1,7 @@
+"use client";
+
+import imgHeroBkg from "@/images/hero_bkg.png";
+
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
@@ -5,36 +9,85 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className="w-full h-full object-cover grayscale-[20%] brightness-[85%]"
-          src="/images/hero-bg.jpg"
-          alt="dramatic interior shot of a bespoke wood paneled room with handcrafted furniture and warm atmospheric lighting"
+          className="w-full h-full object-cover"
+          src={imgHeroBkg.src}
+          alt="oficina de marcenaria com luz natural e ferramentas artesanais"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-on-tertiary-fixed/40 to-transparent" />
+        {/* Left-side gradient — dark where the text lives, fully transparent on the right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(14,10,6,0.82) 0%, rgba(14,10,6,0.60) 35%, rgba(14,10,6,0.15) 60%, transparent 78%)",
+          }}
+        />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-12 relative z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-white font-serif text-[clamp(3rem,8vw,6rem)] leading-[1.1] tracking-tight mb-8">
-            Marcenaria Estância
+        <div className="max-w-2xl">
+          {/* Eyebrow */}
+          <span
+            className="font-label text-xs uppercase tracking-[0.3em] mb-6 block"
+            style={{ color: "#ffb59a" }}
+          >
+            Precisão Artesanal • Est. 1984
+          </span>
+
+          <h1
+            className="font-serif leading-[1.05] mb-6"
+            style={{
+              fontSize: "clamp(3rem, 8vw, 6rem)",
+              color: "#f4f0e9",
+              letterSpacing: "-0.03em",
+            }}
+          >
+            Marcenaria <span style={{ fontStyle: "italic", color: "#ffb59a" }}>Estância</span>
           </h1>
-          <p className="text-white/90 font-body text-xl md:text-2xl leading-relaxed max-w-xl font-light">
-            40 anos produzindo as melhores soluções em móveis planejados.
+
+          {/* Thin rule */}
+          <div className="w-12 h-px mb-6" style={{ background: "#b85c38" }} />
+
+          <p
+            className="font-body text-lg leading-relaxed mb-10"
+            style={{ color: "rgba(244,240,233,0.75)", maxWidth: "26rem" }}
+          >
+            40 anos transformando madeira em legado. Cada peça, uma história feita à mão.
           </p>
-          <div className="mt-12 flex gap-6">
-            <button className="bg-primary px-8 py-4 text-on-primary font-label text-sm uppercase tracking-widest transition-all hover:bg-primary-container">
-              Ver Coleção
-            </button>
-          </div>
+
+          <button
+            className="font-label text-xs uppercase tracking-[0.18em] px-6 py-3 rounded-full transition-all duration-200"
+            style={{ background: "#b85c38", color: "#f4f0e9" }}
+            onMouseEnter={e => (e.currentTarget.style.background = "#994422")}
+            onMouseLeave={e => (e.currentTarget.style.background = "#b85c38")}
+          >
+            Ver Coleção
+          </button>
         </div>
       </div>
 
-      {/* Provenance tag */}
-      <div className="absolute bottom-12 right-12 hidden md:block">
-        <div className="bg-surface-container-highest px-4 py-2 text-on-tertiary-fixed font-label text-[10px] tracking-[0.2em] uppercase">
-          Precisão Artesanal • Est. 1984
+      {/* Bottom scroll hint */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span className="font-label text-[9px] uppercase tracking-[0.3em]" style={{ color: "rgba(244,240,233,0.35)" }}>
+          Scroll
+        </span>
+        <div className="w-px h-8 overflow-hidden" style={{ background: "rgba(244,240,233,0.15)" }}>
+          <div
+            className="w-full h-1/2"
+            style={{
+              background: "#b85c38",
+              animation: "scrollHint 1.8s ease-in-out infinite",
+            }}
+          />
         </div>
       </div>
+
+      <style>{`
+        @keyframes scrollHint {
+          0%   { transform: translateY(-100%); }
+          100% { transform: translateY(300%); }
+        }
+      `}</style>
     </section>
   );
 }

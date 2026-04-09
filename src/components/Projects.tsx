@@ -58,7 +58,16 @@ export default function Projects() {
             <span className="text-primary font-label text-xs uppercase tracking-[0.3em] mb-4 block">
               Portfolio
             </span>
-            <h2 className="font-serif text-5xl text-on-surface">Projetos Selecionados</h2>
+            <h2
+              className="font-serif leading-[1.05]"
+              style={{
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                color: "#2a1e10",
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Projetos <span style={{ fontStyle: "italic", color: "#b85c38" }}>Selecionados</span>
+            </h2>
           </div>
           <div className="text-on-surface-variant font-body text-sm italic mb-2">
             Coleção 2023—2024

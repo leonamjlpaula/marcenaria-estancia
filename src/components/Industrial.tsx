@@ -1,31 +1,56 @@
+"use client";
+
+import imgCarrinha from "@/images/moveis_industriais/carrinha_bebidas.png";
+import imgEstante1 from "@/images/moveis_industriais/estante_1.png";
+import imgEstante2 from "@/images/moveis_industriais/estante_2.png";
+import imgEstante3 from "@/images/moveis_industriais/estante_3.png";
+import imgConjunto from "@/images/moveis_industriais/conjunto_mesa.png";
+
 const products = [
   {
-    index: "01",
-    title: "Mesa de Jantar Urban",
-    material: "Carvalho Maciço & Aço Carbono",
-    desc: "Tampo em carvalho maciço com 6 cm de espessura. Base tubular em aço carbono com acabamento fosco.",
-    swatchColors: ["#3b2410", "#5c3a1e", "#1a0e06"],
+    title: "Carrinho Bar Industrial",
+    material: "Ferro Fundido & Madeira de Lei",
+    desc: "Estrutura em ferro fundido pintado a pó. Tampo e prateleira inferior em madeira com acabamento natural.",
+    img: imgCarrinha,
+    alt: "carrinho bar industrial em ferro e madeira",
+    span: "lg:col-span-6",
+    height: "h-[520px]",
   },
   {
-    index: "02",
-    title: "Estante Modular Loft",
-    material: "Nogueira Americana & Ferro",
-    desc: "Estrutura modular em ferro forjado. Prateleiras em nogueira americana com junta aparente.",
-    swatchColors: ["#2c1a0e", "#4a2c18", "#0f0805"],
+    title: "Estante Loft I",
+    material: "Aço Bruto & Pinus Nodoso",
+    desc: "Montantes em aço bruto e prateleiras em pinus nodoso. Parafusos industriais aparentes como detalhe de design.",
+    img: imgEstante1,
+    alt: "estante industrial em aço e pinus",
+    span: "lg:col-span-6",
+    height: "h-[520px]",
   },
   {
-    index: "03",
-    title: "Mesa de Centro Factory",
-    material: "Madeira de Demolição & Metal",
-    desc: "Tampo em madeira de demolição com marcas naturais preservadas. Base soldada à mão.",
-    swatchColors: ["#4a3520", "#6b4f30", "#2a1e10"],
+    title: "Estante Loft II",
+    material: "Tubo de Ferro & Peroba",
+    desc: "Estrutura tubular em ferro e prateleiras em peroba maciça. Ideal para home offices e cantinhos de leitura.",
+    img: imgEstante2,
+    alt: "estante compacta industrial em ferro e peroba",
+    span: "lg:col-span-4",
+    height: "h-[400px]",
   },
   {
-    index: "04",
-    title: "Escrivaninha Studio",
-    material: "Freijó & Base Industrial",
-    desc: "Superfície em freijó com veio pronunciado. Pés hairpin em aço preto fosco.",
-    swatchColors: ["#5c3d1a", "#7a5228", "#3a2510"],
+    title: "Estante Loft III",
+    material: "Perfil Metálico & Eucalipto",
+    desc: "Perfis metálicos soldados e prateleiras em eucalipto tratado. Acabamento encerado que preserva nós e veios naturais.",
+    img: imgEstante3,
+    alt: "estante alta industrial em metal e eucalipto",
+    span: "lg:col-span-4",
+    height: "h-[400px]",
+  },
+  {
+    title: "Conjunto Mesa Urban",
+    material: "Aço Carbono & Madeira de Demolição",
+    desc: "Base em aço carbono jateado e tampos em madeira de demolição. Peças únicas — cada exemplar carrega marcas do tempo.",
+    img: imgConjunto,
+    alt: "conjunto de mesa e bancos industrial em aço e madeira de demolição",
+    span: "lg:col-span-4",
+    height: "h-[400px]",
   },
 ];
 
@@ -72,123 +97,104 @@ export default function Industrial() {
         </div>
       </div>
 
-      {/* Thin rule */}
-      <div className="mx-12" style={{ height: "1px", background: "rgba(219,193,184,0.10)" }} />
+      {/* Grid */}
+      <div className="container mx-auto px-12 pb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
+          {products.map((p, i) => (
+            <div
+              key={i}
+              className={`${p.span} group relative overflow-hidden cursor-pointer`}
+            >
+              {/* Image */}
+              <div className={`relative ${p.height} overflow-hidden`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.img.src}
+                  alt={p.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-      {/* Product rows */}
-      <div className="container mx-auto px-12">
-        {products.map((p, i) => (
-          <div key={i}>
-            <div className="group grid grid-cols-1 lg:grid-cols-12 gap-0 items-center py-14 cursor-pointer relative">
-
-              {/* Index number — background accent */}
-              <span
-                className="absolute right-0 top-1/2 -translate-y-1/2 font-serif select-none pointer-events-none hidden lg:block"
-                style={{
-                  fontSize: "180px",
-                  lineHeight: 1,
-                  color: "rgba(244,240,233,0.03)",
-                  letterSpacing: "-0.05em",
-                }}
-                aria-hidden
-              >
-                {p.index}
-              </span>
-
-              {/* Small index */}
-              <div className="lg:col-span-1 mb-4 lg:mb-0">
-                <span
-                  className="font-label text-xs tracking-[0.2em]"
-                  style={{ color: "rgba(244,240,233,0.30)" }}
-                >
-                  {p.index}
-                </span>
-              </div>
-
-              {/* Product name + material */}
-              <div className="lg:col-span-5 mb-6 lg:mb-0">
-                <h3
-                  className="font-serif mb-2 transition-colors duration-500"
-                  style={{
-                    fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-                    color: "#f4f0e9",
-                    letterSpacing: "-0.02em",
-                  }}
-                >
-                  {p.title}
-                </h3>
-                {/* Provenance tag */}
-                <span
-                  className="inline-block font-label text-[10px] uppercase tracking-[0.18em] px-3 py-1"
-                  style={{
-                    background: "rgba(219,193,184,0.08)",
-                    color: "#d8c2b6",
-                    border: "1px solid rgba(219,193,184,0.15)",
-                  }}
-                >
-                  {p.material}
-                </span>
-              </div>
-
-              {/* Description */}
-              <div className="lg:col-span-4 mb-8 lg:mb-0 lg:pr-12">
-                <p
-                  className="font-body text-sm leading-relaxed"
-                  style={{ color: "rgba(244,240,233,0.45)" }}
-                >
-                  {p.desc}
-                </p>
-              </div>
-
-              {/* Swatch / image placeholder */}
-              <div className="lg:col-span-2 flex justify-end">
+                {/* Permanent dark gradient at bottom */}
                 <div
-                  className="w-20 h-20 lg:w-24 lg:h-24 transition-transform duration-700 group-hover:scale-110 relative overflow-hidden"
-                  aria-hidden
-                >
-                  <div
-                    className="absolute inset-0"
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(18,14,10,0.85) 0%, rgba(18,14,10,0.3) 45%, transparent 75%)",
+                  }}
+                />
+
+                {/* Content — pinned to bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  {/* Material tag */}
+                  <span
+                    className="inline-block font-label text-[9px] uppercase tracking-[0.2em] px-3 py-1 mb-3"
                     style={{
-                      background: `radial-gradient(ellipse at 30% 30%, ${p.swatchColors[0]}, ${p.swatchColors[1]} 50%, ${p.swatchColors[2]})`,
+                      background: "rgba(219,193,184,0.12)",
+                      color: "#d8c2b6",
+                      border: "1px solid rgba(219,193,184,0.2)",
+                      backdropFilter: "blur(4px)",
                     }}
-                  />
-                  {/* Subtle grain texture overlay */}
-                  <div
-                    className="absolute inset-0"
+                  >
+                    {p.material}
+                  </span>
+
+                  <h3
+                    className="font-serif mb-2"
                     style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(92deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 3px)",
+                      fontSize: i < 2 ? "clamp(1.5rem, 2.5vw, 2rem)" : "clamp(1.2rem, 2vw, 1.6rem)",
+                      color: "#f4f0e9",
+                      letterSpacing: "-0.02em",
+                      lineHeight: 1.1,
                     }}
-                  />
+                  >
+                    {p.title}
+                  </h3>
+
+                  {/* Description — visible on hover */}
+                  <p
+                    className="font-body text-sm leading-relaxed max-w-sm overflow-hidden max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-500 ease-out"
+                    style={{ color: "rgba(244,240,233,0.65)" }}
+                  >
+                    {p.desc}
+                  </p>
                 </div>
+
+                {/* Top-right corner accent on hover */}
+                <div
+                  className="absolute top-0 right-0 w-px transition-all duration-500 ease-out group-hover:h-16"
+                  style={{
+                    height: 0,
+                    background: "#b85c38",
+                  }}
+                />
+                <div
+                  className="absolute top-0 right-0 h-px transition-all duration-500 ease-out group-hover:w-16"
+                  style={{
+                    width: 0,
+                    background: "#b85c38",
+                  }}
+                />
               </div>
             </div>
-
-            {/* Row separator (except last) */}
-            {i < products.length - 1 && (
-              <div style={{ height: "1px", background: "rgba(219,193,184,0.08)" }} />
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Footer CTA */}
       <div
-        className="mx-12 mt-8 mb-24 pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+        className="mx-12 mt-10 mb-24 pt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
         style={{ borderTop: "1px solid rgba(219,193,184,0.10)" }}
       >
         <p className="font-label text-xs uppercase tracking-[0.2em]" style={{ color: "rgba(244,240,233,0.35)" }}>
           Todas as peças são produzidas sob medida
         </p>
         <button
-          className="group flex items-center gap-4 font-label text-xs uppercase tracking-widest transition-colors duration-300"
-          style={{ color: "#ffb59a" }}
+          className="font-label text-xs uppercase tracking-[0.18em] px-6 py-3 rounded-full transition-all duration-200"
+          style={{ background: "#b85c38", color: "#f4f0e9" }}
+          onMouseEnter={e => (e.currentTarget.style.background = "#994422")}
+          onMouseLeave={e => (e.currentTarget.style.background = "#b85c38")}
         >
-          <span>Solicitar Catálogo Completo</span>
-          <span
-            className="w-8 h-px block transition-all duration-500 group-hover:w-14"
-            style={{ background: "#b85c38" }}
-          />
+          Solicitar Catálogo Completo
         </button>
       </div>
 

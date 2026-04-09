@@ -34,15 +34,15 @@ export default function Testimonials() {
               Depoimentos
             </span>
             <h2
-              className="font-serif italic"
+              className="font-serif"
               style={{
                 fontSize: "clamp(2rem, 4vw, 3.2rem)",
-                color: "#1c1c18",
-                letterSpacing: "-0.02em",
-                lineHeight: 1.2,
+                color: "#2a1e10",
+                letterSpacing: "-0.03em",
+                lineHeight: 1.05,
               }}
             >
-              Palavras de quem vive<br />nossos espaços
+              Palavras de quem vive<br />nossos <span style={{ fontStyle: "italic", color: "#994422" }}>espaços</span>
             </h2>
           </div>
           {/* Decorative rule */}

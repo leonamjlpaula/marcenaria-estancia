@@ -1,3 +1,5 @@
+"use client";
+
 const MAPS_URL = "https://maps.app.goo.gl/HPsNnbKKiVckQgH76";
 const MAPS_EMBED =
   "https://maps.google.com/maps?q=Rua+Jo%C3%A3o+Cirino+Sobrinho%2C+265%2C+S%C3%A3o+Pedro%2C+SP%2C+Brazil&output=embed&z=16&hl=pt-BR";
@@ -45,9 +47,16 @@ export default function Contact() {
 
           {/* Left — contact info */}
           <div>
-            <h2 className="font-serif text-6xl mb-12">
+            <h2
+              className="font-serif mb-12 leading-[1.05]"
+              style={{
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                color: "#2a1e10",
+                letterSpacing: "-0.03em",
+              }}
+            >
               Comece sua <br />
-              <span className="italic text-primary">Próxima História</span>
+              <span style={{ fontStyle: "italic", color: "#b85c38" }}>Próxima História</span>
             </h2>
             <p className="text-on-surface-variant font-body text-xl mb-16 leading-relaxed">
               Estamos prontos para ouvir suas ideias e transformá-las em realidade sólida e
@@ -87,9 +96,14 @@ export default function Contact() {
             </div>
 
             <div className="mt-20">
-              <button className="bg-primary px-12 py-6 text-on-primary font-label text-sm uppercase tracking-widest flex items-center gap-4 group hover:bg-primary-container transition-colors">
+              <button
+                className="group font-label text-xs uppercase tracking-[0.18em] px-7 py-3 rounded-full flex items-center gap-3 transition-all duration-200"
+                style={{ background: "#b85c38", color: "#f4f0e9" }}
+                onMouseEnter={e => (e.currentTarget.style.background = "#994422")}
+                onMouseLeave={e => (e.currentTarget.style.background = "#b85c38")}
+              >
                 <span>Falar no WhatsApp</span>
-                <span className="group-hover:translate-x-2 transition-transform">
+                <span className="group-hover:translate-x-1 transition-transform duration-200">
                   <IconArrow />
                 </span>
               </button>
