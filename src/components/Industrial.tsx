@@ -1,10 +1,10 @@
 "use client";
 
-import imgCarrinha from "@/images/moveis_industriais/carrinha_bebidas.png";
-import imgEstante1 from "@/images/moveis_industriais/estante_1.png";
-import imgEstante2 from "@/images/moveis_industriais/estante_2.png";
-import imgEstante3 from "@/images/moveis_industriais/estante_3.png";
-import imgConjunto from "@/images/moveis_industriais/conjunto_mesa.png";
+import imgCarrinha from "@/images/moveis_industriais/carrinha_bebidas.webp";
+import imgEstante1 from "@/images/moveis_industriais/estante_1.webp";
+import imgEstante2 from "@/images/moveis_industriais/estante_2.webp";
+import imgEstante3 from "@/images/moveis_industriais/estante_3.webp";
+import imgConjunto from "@/images/moveis_industriais/conjunto_mesa.webp";
 
 const products = [
   {

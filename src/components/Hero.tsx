@@ -1,6 +1,6 @@
 "use client";
 
-import imgHeroBkg from "@/images/hero_bkg.png";
+import imgHeroBkg from "@/images/hero_bkg.webp";
 
 export default function Hero() {
   return (

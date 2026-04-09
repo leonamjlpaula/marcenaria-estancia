@@ -1,4 +1,4 @@
-import imgPaiFIlho from "@/images/pai_filho.png";
+import imgPaiFIlho from "@/images/pai_filho.webp";
 
 export default function Story() {
   return (
